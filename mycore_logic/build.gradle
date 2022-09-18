@@ -1,0 +1,21 @@
+apply plugin: 'application'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+version = "1.0.0"
+
+task deleteJar(type: Delete) {
+    delete 'libs/jars/my_core.jar'
+}
+
+task createJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('libs/jars/')
+    include('classes.jar')
+    rename('classes.jar', 'my_core.jar')
+}
+
+createJar.dependsOn(deleteJar, build)
