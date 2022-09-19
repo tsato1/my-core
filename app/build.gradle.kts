@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    compileSdk = 33
+    compileSdk = ProjectConfig.compileSdk
     defaultConfig {
         applicationId = ProjectConfig.appId
         minSdk = ProjectConfig.minSdk
@@ -44,6 +44,7 @@ android {
 }
 
 dependencies {
+    implementation("com.github.tsato1:my-core:0.0.0")
     implementation(AndroidX.coreKtx)
     implementation(Compose.ui)
     implementation(Compose.material3)
