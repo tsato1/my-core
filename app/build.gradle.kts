@@ -44,7 +44,7 @@ android {
 }
 
 dependencies {
-    implementation("com.github.tsato1:my-core:0.0.2")
+//    implementation("com.github.tsato1:my-core:0.0.2")
     implementation(AndroidX.coreKtx)
     implementation(Compose.ui)
     implementation(Compose.material3)

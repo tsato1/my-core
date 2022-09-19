@@ -43,7 +43,7 @@ afterEvaluate {
             create<MavenPublication>("maven") {
                 groupId = "com.github.tsato1"
                 artifactId = "my-core"
-                version = "0.0.2"
+                version = "0.0.3"
             }
         }
     }
