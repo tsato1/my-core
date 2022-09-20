@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk ProjectConfig.compileSdk
 
     defaultConfig {
-        minSdk 21
-        targetSdk 33
+        minSdk ProjectConfig.minSdk
+        targetSdk ProjectConfig.targetSdk
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -38,7 +38,7 @@ afterEvaluate {
 
                 groupId = 'com.github.tsato1'
                 artifactId = 'my-core'
-                version = '0.0.5'
+                version = ProjectConfig.versionName
             }
         }
     }
@@ -46,11 +46,11 @@ afterEvaluate {
 
 dependencies {
     // AndroidX
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
 
     // Compose
-    implementation 'androidx.compose.ui:ui:1.2.1'
-    implementation 'androidx.compose.runtime:runtime:1.2.1'
+    implementation "androidx.compose.ui:ui:${Versions.compose}"
+    implementation "androidx.compose.runtime:runtime:${Versions.compose}"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
