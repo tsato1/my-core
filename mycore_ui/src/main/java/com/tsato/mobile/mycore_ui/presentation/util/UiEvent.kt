@@ -6,6 +6,5 @@ sealed class UiEvent: Event() {
     data class ShowDialog(val title: UiText, val body: UiText) : UiEvent()
     data class Navigate(val route: String) : UiEvent()
     object NavigateUp : UiEvent()
-    object OnAction : UiEvent()
-    object DoNothing : UiEvent()
+    object Do : UiEvent()
 }
